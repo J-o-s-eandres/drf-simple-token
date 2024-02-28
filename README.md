@@ -1,43 +1,43 @@
 
 # Django REST Authentication Example
 
-Este es un proyecto simple que muestra cómo implementar la autenticación de usuarios utilizando Django REST Framework.
+This is a simple project that shows how to implement user authentication using the Django REST Framework.
 
-## Instalación
+## Facility
 
-1. Clona este repositorio en tu máquina local.
-2. Asegúrate de tener Python y Django instalados en tu sistema.
-3. Instala los requerimientos del proyecto ejecutando `pip install -r requirements.txt`.
-4. Ejecuta las migraciones con el comando `python manage.py migrate`.
+1. Clone this repository to your local machine.
+2. Make sure you have Python and Django installed on your system.
+3. Install the project requirements by running `pip install -r requirements.txt`.
+4. Run the migrations with the command `python manage.py migrate`.
 
-## Uso
+## Use
 
-1. Inicia el servidor local ejecutando `python manage.py runserver`.
-2. Puedes interactuar con las siguientes endpoints:
+1. Start the local server by running `python manage.py runserver`.
+2. You can interact with the following endpoints:
 
-   - `/api/login/`: Endpoint para iniciar sesión.
-   - `/api/register/`: Endpoint para registrar un nuevo usuario.
-   - `/api/profile/`: Endpoint para ver el perfil del usuario autenticado.
+   - `/api/login/`: Endpoint to log in.
+   - `/api/register/`: Endpoint to register a new user.
+   - `/api/profile/`: Endpoint to view the profile of the authenticated user.
 
 ## Endpoints
 
 ### `/api/login/`
 
-- Método: POST
-- Parámetros de entrada: `username`, `password`
-- Respuesta exitosa:
+- Method: POST
+- Input parameters: `username`, `password`
+- Successful response:
   ```
   {
-      "token": "<token_de_autenticación>",
+      "token": "<authentication_token>",
       "user": {
-          "id": <id_del_usuario>,
-          "username": "<nombre_de_usuario>",
-          "email": "<correo_electrónico>"
+          "id": <user_id>,
+          "username": "<username>",
+          "email": "<email>"
           ...
       }
   }
   ```
-- Respuesta de error: 
+- Error response:
   ```
   {
       "error": "Invalid password"
@@ -46,24 +46,22 @@ Este es un proyecto simple que muestra cómo implementar la autenticación de us
   
 ### `/api/register/`
 
-- Método: POST
-- Parámetros de entrada: `username`, `password`, `email` (otros campos opcionales)
-- Respuesta exitosa: Lo mismo que en el endpoint de login
-- Respuesta de error: Detalles de los errores de validación
+- Method: POST
+- Input parameters: `username`, `password`, `email` (other optional fields)
+- Successful response: The same as in the login endpoint
+- Error response: Details of validation errors
   
 ### `/api/profile/`
 
-- Método: POST
-- Parámetros de entrada: Ninguno (la autenticación se realiza mediante el token)
-- Respuesta exitosa: Perfil del usuario autenticado
-- Respuesta de error: 401 Unauthorized si no se proporciona un token válido
+- Method: POST
+- Input parameters: None (authentication is done using the token)
+- Successful response: Authenticated user profile
+- Error response: 401 Unauthorized if no valid token is provided
   
-## Autor
+## Author
 
-Este proyecto fue desarrollado por Joseandres Montesino como ejemplo de implementación de autenticación en Django REST Framework.
+This project was developed by Joseandres Montesino as an example of an authentication implementation in the Django REST Framework.
 
-## Licencia
+## License
 
-Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
-
-
+This project is under the MIT license. For details, see the [LICENSE](LICENSE) file.
