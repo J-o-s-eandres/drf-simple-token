@@ -1,4 +1,4 @@
-```
+
 # Django REST Authentication Example
 
 Este es un proyecto simple que muestra cómo implementar la autenticación de usuarios utilizando Django REST Framework.
@@ -65,5 +65,5 @@ Este proyecto fue desarrollado por Joseandres Montesino como ejemplo de implemen
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
-```
+
 
