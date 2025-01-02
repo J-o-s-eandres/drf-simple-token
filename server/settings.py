@@ -27,8 +27,10 @@ DEBUG = True
 
 #ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 
+#Ngrok host
+ALLOWED_HOSTS = ['*', '7499-104-196-154-143.ngrok-free.app']
 
 # Application definition
 
